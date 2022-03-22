@@ -1,0 +1,80 @@
+.App {
+  padding: 10px;
+}
+
+.App-main ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 5em;
+}
+
+@media (max-width: 750px) {
+  .App-main ul {
+    grid-template-columns: 1fr 1fr;
+  }  
+}
+
+@media (max-width: 550px) {
+  .App-main ul {
+    grid-template-columns: 1fr;
+  }  
+}
+
+.App-main ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-main ul li div {
+  min-height: 215px;
+  margin-bottom: 10px;
+  margin-left: -218px;
+}
+
+.App-main ul li img {
+  width: 218px;
+  position: absolute;
+}
+
+.App-main ul li img.card {
+  transform: rotateY(-90deg);
+  opacity: 0;
+  transition: all;
+  transition-duration: .5s;
+}
+
+.App-main ul li.active img.card {
+  transform: rotateY(0);
+  opacity: 1;
+  transition: all;
+  transition-duration: .5s;
+  transition-delay: .25s;
+}
+
+.App-main ul li img.curinga {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transition: all;
+  transition-duration: .5s;
+  transition-delay: .25s;
+}
+
+.App-main ul li.active img.curinga {
+  transform: rotateY(90deg);
+  opacity: 0;
+  transition: all;
+  transition-duration: .5s;
+}
+
+.App-main ul li h2 {
+  opacity: 0;
+  display: block;
+  text-align: center;
+}
+
+.App-main ul li.active h2 {
+  opacity: 1;
+}
